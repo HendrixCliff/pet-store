@@ -2,7 +2,7 @@ import fetchImages from "../../lib/fetchImages";
 import type { ImagesResults } from "../../models/images";
 import ImgContainer from "../components/ImgContainer"
 import addBlurredDataUrls from "../../lib/getBase64"
- import BirdChewyPicks from "../components/BirdChewy"
+
 
 export default async function Bird() {
   const url ="https://api.pexels.com/v1/search?query=bird&per_page=30&page=1"
@@ -17,7 +17,7 @@ if (!images) {
      <section className=" px-2 my-3 mt-48 grid gap-2 grid-cols-gallery">
         { photosWithBlur.map( photo => {
         return  <ImgContainer key={photo.id}  photo={photo}/>}) }
-         <BirdChewyPicks/>
+        
     </section>
  )
 }

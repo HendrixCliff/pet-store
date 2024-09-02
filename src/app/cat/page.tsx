@@ -2,7 +2,7 @@ import fetchImages from "../../lib/fetchImages";
 import type { ImagesResults } from "../../models/images";
 import ImgContainer from "../components/ImgContainer"
 import addBlurredDataUrls from "../../lib/getBase64"
-import CatChewyPicks from "../components/CatChewy"
+
 
 
 export default async function Cat() {
@@ -18,7 +18,7 @@ if (!images) {
      <section className=" px-2 my-3 mt-48 grid gap-2 grid-cols-gallery">
         { photosWithBlur.map( photo => {
         return  <ImgContainer key={photo.id}  photo={photo}/>}) }
-       <CatChewyPicks/>
+      
     </section>
  )
 }
