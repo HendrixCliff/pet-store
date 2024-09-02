@@ -97,9 +97,9 @@ import {IoMdMenu} from "react-icons/io"
                 <NavLink  href="/about" className="hover:text-[#ffffff]">
                 Pharmacy
                </NavLink>     
-                <NavLink  href="/services" className="hover:text-[#ffffff]">
+                <h3 className="hover:text-[#ffffff]">
                 Services
-               </NavLink>               
+               </h3>               
             </nav>
             </section>
            
