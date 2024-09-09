@@ -1,27 +1,17 @@
-
+"use client"
 
 import NavLink from "next/link"
-import {
-    HoverCard,
-    HoverCardContent,
-    HoverCardTrigger,
-  } from "@/components/ui/hover-card"
 import  {FaShoppingCart} from "react-icons/fa"
  import  {GiImperialCrown} from "react-icons/gi"
 import {RiAccountCircleFill} from "react-icons/ri"
-import {FaRocketchat} from "react-icons/fa"
 import { Badge } from "@/components/ui/badge"
-import {IoMdMenu} from "react-icons/io"
-//  import {useState} from "react"
+import NavBarRecess from "../components/NavBarRecess"
  import Search from "../components/Search"
+ import NavBar from "../components/NavBar"
 
 
   export default function Header() {
-    // const [badge, setBadge] = useState(0)
-
-    // function handleBadge() {
-    //     setBadge(prev => prev + 1)
-    // }
+  
     return (
         <header className="bg-[#090c9b] mb-[5em] w-full max-lg:h-32 h-44 fixed items-center  backdrop-blur-md z-20">
             <section className="flex mt-1 items-center max-lg:gap-1 gap-32 max-lg:px-1 px-5">
@@ -35,25 +25,7 @@ import {IoMdMenu} from "react-icons/io"
                 </NavLink>
                 <Search/>
                 <nav className="flex text-[gold] max-lg:ml-3 ml-36 items-center max-lg:gap-1 gap-10 max-lg:text-[1rem] text-lg font-bold">
-                    <HoverCard>
-                        <HoverCardTrigger className="flex hover:text-[#ffffff] text-center items-center ">
-                       <section className="flex flex-col"><h3> 24/7</h3> <h3>Help</h3> </section>  <FaRocketchat size={35}/>
-                        </HoverCardTrigger>
-                        <HoverCardContent>
-                        <h3>Get help from our experts </h3>
-                        <h3 className="font-bold text-[1.2rem]">1-800-672 4399</h3>
-                        <section className="flex">
-                            <NavLink href="/chat">chat live</NavLink>
-                            <NavLink href="/chat">Contact Us</NavLink>
-                        </section>
-                       <section className="flex">
-                       <NavLink href="/order">Track Order</NavLink>
-                        <NavLink href="/faqs">  -  FAQs</NavLink>
-                        <NavLink href="/shipinfo">  -   Shipping info</NavLink>
-                       </section>
-                       
-                        </HoverCardContent>
-                    </HoverCard>
+                    <NavBar/>
                     <NavLink  className="flex hover:text-[#ffffff] items-center" href="/account" >
                     <RiAccountCircleFill size={35}/>  Account
                     </NavLink>
@@ -61,19 +33,7 @@ import {IoMdMenu} from "react-icons/io"
                     <FaShoppingCart  size={35}/> Cart 
                     <Badge className="absolute rounded-full bottom-5 bg-[#000000] text-[gold]">0</Badge>
                     </NavLink>
-                    <HoverCard>
-                <HoverCardTrigger className="lg:hidden  text-[gold]">
-                 < IoMdMenu size={40}/>
-                </HoverCardTrigger>
-                <HoverCardContent className="flex flex-col gap-2 bg-[#000000] text-[gold] text-center font-bold">
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1 " href="/dog">Dogs</NavLink>
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/cat">Cats</NavLink>
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/bird">Birds</NavLink>
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/horse">Horses</NavLink>
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/pharmacy">Pharmacy</NavLink>
-                    <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/service">Services</NavLink>
-                </HoverCardContent>
-            </HoverCard>
+                    <NavBarRecess/>
                 </nav>
             </section>
             <section className="">

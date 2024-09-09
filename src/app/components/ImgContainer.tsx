@@ -1,3 +1,5 @@
+
+
 import type { Photo } from "../../models/images";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +28,7 @@ export default function ImgContainer({ photo }: Props) {
                     className="rounded-xl  group-hover:opacity-75"
                 />
             </div>
-       </Link>
+            </Link>
         </div>
     );
 } 
